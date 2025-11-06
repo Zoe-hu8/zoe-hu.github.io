@@ -1,0 +1,67 @@
+root{
+    --primary-color: #dc3545;
+    --just-red: rgb(255, 99, 71);
+}
+
+
+#heading1{
+    color:rgb(118, 189, 118);
+    background-color:rgb(198, 157, 157);
+}
+
+.text-pink{
+    color:rgb(215, 116, 134);
+}
+
+.text-background-yellow{
+    background-color:rgb(223, 223, 181);
+}
+
+
+h1{
+    font-size: 3.8rem;
+    font-family: "Playwrite MX Guides", sans-serif;
+    font-style: italic;
+    font-weight: 900;
+
+}
+body{
+    background-image: url("../img/background.jpeg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    color:rgb(137, 246, 209);
+    
+}
+
+a:hover{
+    color: rgb(124, 95, 180);
+}
+
+a{
+    color: var(--just-red);
+    text-decoration: none;
+    background-color: rgb(134, 190, 190);
+    padding: 20px 10px 20px 10px;
+    margin-left: 50px;
+}
+/* This is a comment*/
+
+
+
+.text-para{
+    font-size: 1.8rem;
+    text-align: left;
+    text-align-last: right;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+@media (max-width: 576px){
+    body{
+        background-color: lightblue;
+        background-image: none;
+    }
+}
