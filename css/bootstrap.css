@@ -7,3 +7,7 @@
     background-color: rgb(41, 83, 208);
     border-color: black;
 }
+
+.long column{
+    height: 50vh;
+}
