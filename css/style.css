@@ -78,13 +78,13 @@ body {
   font-size: 15px;
   padding: 10px 18px;
   border-radius: 999px;          
-  background: #c7bccd;          
+  background: var(--button-color);          
   color: var(--text-main-color);
   border: 1px solid rgba(0,0,0,0.05);
 }
 
 .nav-contact-btn:hover {
-  filter: brightness(0.97);
+  background-color:var(--page-background-color)
 }
 
 
