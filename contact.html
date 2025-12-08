@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact - Zoe Hu</title>
+
+    <!-- connect to shared style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!--  Navigation bar  -->
+    <header class="site-header">
+      <div class="nav-container">
+        <!-- logo -->
+        <div class="nav-logo">ZOE HU</div>
+
+        <!-- navigation links -->
+        <nav class="nav-links" aria-label="Primary">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about-web.html" class="nav-link">About</a>
+          <a href="education.html" class="nav-link">Education</a>
+          <a href="experience.html" class="nav-link">Experience</a>
+          <a href="skills.html" class="nav-link">Skills</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          
+        </nav>
+
+        <!-- contact button -->
+        <a href="contact.html" class="nav-contact-btn">Contact Me</a>
+      </div>
+    </header>
+    <!--  Navigation bar ends  -->
+
+
+    <!--  Main contact section  -->
+    <main class="contact-page">
+      <section class="contact-section">
+        <!-- section title -->
+        <h1 class="contact-title">CONTACT INFO</h1>
+        <div class="contact-title-line"></div>
+
+        <!-- contact rows wrapper -->
+        <div class="contact-items">
+
+          <!-- Email row (with copy button) -->
+          <div class="contact-row">
+            <span class="contact-label">Email</span>
+            <div class="contact-right">
+              <span id="contact-email" class="contact-value">
+                zoehu7343@gmail.com
+              </span>
+              <button type="button" class="copy-btn" onclick="copyEmail()">
+                Copy
+              </button>
+            </div>
+          </div>
+
+          <!-- Phone row -->
+          <div class="contact-row">
+            <span class="contact-label">Phone</span>
+            <span class="contact-value">+1 343-363-2921</span>
+          </div>
+
+          <!-- Location row -->
+          <div class="contact-row">
+            <span class="contact-label">Location</span>
+            <span class="contact-value">Montreal, Canada</span>
+          </div>
+
+          <!-- LinkedIn row (icon opens new tab) -->
+          <div class="contact-row">
+            <span class="contact-label">LinkedIn</span>
+            <a
+              href="https://www.linkedin.com/in/zoe-hu-698964346/"
+              class="contact-linkedin-icon"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Zoe Hu LinkedIn profile in a new tab"
+            >
+              <span class="linkedin-in">in</span>
+            </a>
+          </div>
+
+        </div>
+      </section>
+    </main>
+    <!--  Main contact section ends  -->
+
+
+    <!--  Footer  -->
+    <footer class="site-footer">
+      <p>© 2025 Zoe Hu. All rights reserved.</p>
+    </footer>
+
+    <!--  Copy email script  -->
+    <script>
+      function copyEmail() {
+        const email = 'zoehu7343@gmail.com';
+        const btn = document.querySelector('.copy-btn');
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(email).then(function () {
+            const original = btn.textContent;
+            btn.textContent = 'Copied';
+            setTimeout(function () {
+              btn.textContent = original;
+            }, 1500);
+          }).catch(function () {
+            window.prompt('Copy the email address:', email);
+          });
+        } else {
+          window.prompt('Copy the email address:', email);
+        }
+      }
+    </script>
+  </body>
+</html>

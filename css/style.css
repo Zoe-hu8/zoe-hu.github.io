@@ -283,7 +283,7 @@ body {
 .title-underline {
     width: 120px;
     height: 2px;
-    background: var(--text-main-color);
+    background: var(--link-color);
     margin: 0 auto 40px;
     opacity: 0.4;
 }
@@ -325,7 +325,7 @@ body {
 .education-underline {
   width: 90px;
   height: 3px;
-  background: var(--text-muted-color);
+  background: var(--link-color);
   margin: 0 auto 40px;
   border-radius: 999px;
 }
@@ -507,5 +507,244 @@ body {
   .experience-left,
   .experience-right {
     flex: 1 1 auto;
+  }
+}
+
+
+/* ======================= SKILLS PAGE ======================= */
+
+.skills-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px 80px;
+}
+
+/* Title SKILLS */
+.skills-title-section {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.skills-page-title {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text-main-color);
+  margin-bottom: 8px;
+}
+
+.skills-title-line {
+  width: 80px;
+  height: 3px;
+  background: var(--link-color);
+  margin: 0 auto;
+  border-radius: 999px;
+  opacity: 0.7;
+}
+
+/* Each major section (Technical / Creative) */
+.skills-section {
+  margin-bottom: 40px;
+}
+
+.skills-section-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text-main-color);
+}
+
+/* Two-column grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 40px; 
+}
+
+/* Single skill block */
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Name on the left, level on the right */
+.skill-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-name {
+  font-weight: 600;
+  color: var(--text-main-color);
+}
+
+.skill-level {
+  font-size: 14px;
+  color: var(--text-muted-color);
+}
+
+/* Progress bar */
+.skill-bar {
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.15);  
+  overflow: hidden;
+}
+
+/* Progress bar fill */
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--button-color);
+}
+
+/* Advanced */
+.level-advanced {
+  width: 100%;
+}
+
+.level-intermediate {
+  width: 70%;
+}
+
+.level-beginner {
+  width: 40%;
+}
+
+/* Small screens: single column */
+@media (max-width: 800px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ======================= CONTACT PAGE ======================= */
+
+.contact-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px 100px;
+}
+
+/* main blue block title */
+.contact-section {
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 28px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  color: var(--text-main-color);
+}
+
+.contact-title-line {
+  width: 80px;
+  height: 2px;
+  background:var(--link-color);
+  margin: 0 auto 40px;
+  opacity: 0.8;
+}
+
+/* wrapper for all rows */
+.contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  text-align: left;
+}
+
+/* single row: label left, value / button right */
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  padding-bottom: 10px;
+}
+
+/* label: EMAIL / PHONE / LOCATION / LINKEDIN */
+.contact-label {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* right side text */
+.contact-value {
+  font-size: 15px;
+  color: #ffffff;
+}
+
+/* right side container for email + copy button */
+.contact-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* copy button */
+.copy-btn {
+  padding: 6px 18px;
+  border-radius: 999px;
+  border: none;
+  background: var(--button-color); /* 你的绿色/湖蓝 */
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.15s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.copy-btn:hover {
+  transform: translateY(-1px);
+  background: var(--link-hover-color);
+}
+
+.copy-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* LinkedIn circle icon */
+.contact-linkedin-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.linkedin-in {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.contact-linkedin-icon:hover {
+  background: var(--button-color);
+  transform: translateY(-1px);
+}
+
+/* mobile layout tweaks */
+@media (max-width: 600px) {
+  .contact-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .contact-right {
+    align-items: flex-start;
   }
 }
