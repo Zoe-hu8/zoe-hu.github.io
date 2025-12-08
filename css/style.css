@@ -396,3 +396,116 @@ body {
     padding: 24px 20px 22px;
   }
 }
+
+
+/* ======================= EXPERIENCE PAGE ======================= */
+
+.experience-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px 80px;
+}
+
+/* --- Main page title --- */
+.experience-title-section {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.experience-page-title {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text-main-color);
+  margin-bottom: 8px;
+}
+
+.experience-title-line {
+  width: 80px;
+  height: 3px;
+  background: var(--link-color);
+  margin: 0 auto;
+  border-radius: 999px;
+  opacity: 0.7;
+}
+
+/* --- Subtitles: Internship / Research --- */
+.experience-section {
+  margin-bottom: 40px;
+}
+
+.experience-subtitle {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text-main-color);
+}
+
+/* --- Single experience card --- */
+.experience-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+
+  background: var(--card-background-color);
+  border-radius: 22px;
+  padding: 24px 28px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.experience-left {
+  flex: 0 0 38%;   /* Left side: Organization + Role + Date */
+}
+
+.experience-right {
+  flex: 1;         /* Right side: Description */
+}
+
+/* --- Left side text hierarchy --- */
+.exp-org {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--text-main-color);
+}
+
+.exp-role {
+  font-size: 15px;
+  font-style: italic;
+  margin: 0 0 6px;
+  color: var(--text-main-color);
+}
+
+.exp-date {
+  font-size: 14px;
+  margin: 0;
+  color: var(--text-muted-color);
+}
+
+/* --- Right side description --- */
+.exp-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+  color: var(--text-main-color);
+}
+
+/* --- Research cards --- */
+.research-card {
+  margin-top: 8px;
+}
+
+/* --- Stack vertically on small screens --- */
+@media (max-width: 800px) {
+  .experience-card {
+    flex-direction: column;
+    padding: 20px 18px;
+  }
+
+  .experience-left,
+  .experience-right {
+    flex: 1 1 auto;
+  }
+}
