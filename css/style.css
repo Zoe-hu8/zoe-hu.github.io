@@ -263,7 +263,7 @@ body {
 }
 
 
-/*--ABOUT PAGE (Uses your color variables) -- */
+/*--ABOUT PAGE -- */
 
 .about-section {
     background: var(--page-background-color); 
@@ -299,7 +299,7 @@ body {
 
 
 
-/*-- EDUCATION PAGE (Uses your color variables) -- */
+/*-- EDUCATION PAGE -- */
 
 .education-wrapper {
   padding: 60px 0 40px;
@@ -398,7 +398,7 @@ body {
 }
 
 
-/* ======================= EXPERIENCE PAGE ======================= */
+/*  --EXPERIENCE PAGE -- */
 
 .experience-page {
   max-width: 1100px;
@@ -511,7 +511,7 @@ body {
 }
 
 
-/* ======================= SKILLS PAGE ======================= */
+/* -- SKILLS PAGE -- */
 
 .skills-page {
   max-width: 1100px;
@@ -621,7 +621,7 @@ body {
   }
 }
 
-/* ======================= CONTACT PAGE ======================= */
+/* -- CONTACT PAGE -- */
 
 .contact-page {
   max-width: 900px;
@@ -693,7 +693,7 @@ body {
   padding: 6px 18px;
   border-radius: 999px;
   border: none;
-  background: var(--button-color); /* 你的绿色/湖蓝 */
+  background: var(--button-color); 
   color: #ffffff;
   font-size: 14px;
   font-weight: 600;
@@ -736,7 +736,7 @@ body {
   transform: translateY(-1px);
 }
 
-/* mobile layout tweaks */
+/* mobile layout */
 @media (max-width: 600px) {
   .contact-row {
     flex-direction: column;
@@ -748,3 +748,123 @@ body {
     align-items: flex-start;
   }
 }
+
+
+/* -- PROJECTS PAGE -- */
+
+.projects-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 20px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* Top PROJECTS main title */
+.projects-title-section {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.projects-page-title {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text-main-color);
+  margin-bottom: 8px;
+}
+
+.projects-title-line {
+  width: 80px;
+  height: 3px;
+  background: var(--link-color);
+  margin: 0 auto;
+  border-radius: 999px;
+  opacity: 0.7;
+}
+
+/* Single project card */
+.project-card {
+  background: var(--card-background-color);
+  border-radius: 28px;
+  padding: 40px 40px 36px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Card header: project title + short description */
+.project-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.project-title {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 0 6px;
+  color: var(--text-main-color);
+}
+
+.project-subtitle {
+  margin: 0;
+  font-size: 15px;
+  color: var(--text-muted-color);
+}
+
+/* Description paragraphs */
+.project-description {
+  margin: 14px 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-main-color);
+}
+
+/* Video subtitle */
+.project-media-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 20px 0 14px;
+  color: var(--text-main-color);
+}
+
+/* Video container */
+.project-video-wrapper {
+  border-radius: 22px;
+  overflow: hidden;
+  background: #000;
+}
+
+/* Video body */
+.project-video {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+}
+
+/* mobile layout */
+@media (max-width: 768px) {
+  .project-card {
+    padding: 28px 18px 26px;
+    border-radius: 22px;
+  }
+
+  .project-title {
+    font-size: 22px;
+  }
+
+  .project-media-title {
+    font-size: 16px;
+  }
+
+  .project-description {
+    font-size: 14px;
+  }
+}
+
+.project-video-frame {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+/* responsive iframe for video */
